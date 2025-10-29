@@ -1,12 +1,12 @@
 import express from "express";
-import userRoutes from "./src/routes/userRoutes.js"; 
+import authRoutes from "./src/routes/authRoutes.js"; 
 
 const app = express();
 const PORT = 4000;
 
 app.use(express.json()); // parse JSON bodies
 
-app.use("/api/users", userRoutes);
+app.use("/api/users", authRoutes);
 
 app.get('/health', (req, res) => {
   res.json({ status: "Atreya Backend running" });
